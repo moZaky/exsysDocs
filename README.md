@@ -370,10 +370,10 @@ follow the cli questions(normally go for cloud then press enter and so on)
 
 #### Regenrate Route
 >lets assuem ur page route will be changed, or your page will accept param(s)
-all you need to update ur package.json like below
-then run``` yarn generate-routes```
-this command will update routes file in  ```app->routes->pagesRoutesData.ts```
-this command can be found ***in root package.json in scripts section***
+>all you need to update ur package.json like below
+>then run``` yarn generate-routes```
+>this command will update routes file in  ```app->routes->pagesRoutesData.ts```
+>this command can be found ***in root package.json in scripts section***
 
 ```Javascript
 {
