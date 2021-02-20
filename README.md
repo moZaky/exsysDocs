@@ -17,6 +17,7 @@ in this file you will find the following.
 - Build (cLoud)
 - Regenrate Route
 - Exsys Components
+- Antd 3
 
 
 ## Clone Repo
@@ -42,7 +43,7 @@ yarn bootstrap
 ## App structure 
 
 ```sh 
-  ├─> app #  Javascript Redux saga  (old structure )   
+├─> app #  Javascript Redux saga  (old structure )   
  │   ├── .env   #global enviorment variables
  │   ├─> public
  │   └─> src
@@ -187,7 +188,7 @@ yarn bootstrap
  │   ├─> types
  │   └─> validators 
 ```
-## How we use Git
+## How we use Git 
 > instead of creating Pull request, we rebase from master.
 >@see https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase#:~:text=Rebase%20is%20one%20of%20two,has%20powerful%20history%20rewriting%20features.
 1) When creating a new branch from master:
@@ -431,3 +432,7 @@ const Modal = createLazyComponent(() =>
 
 ```
 
+## Antd 3
+[please check ant design 3 components ](https://3x.ant.design/docs/react/introduce)
+![antd](https://user-images.githubusercontent.com/12882714/108598637-65cb2480-7397-11eb-9cb2-70268dc3d71a.png) +
+![react](https://user-images.githubusercontent.com/12882714/108598638-6663bb00-7397-11eb-8052-b40ecb463e47.png)
