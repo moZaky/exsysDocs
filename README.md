@@ -16,7 +16,7 @@ in this file you will find the following.
 - How to: Create Page Labels
 - Build (cLoud)
 - Build (update env )
-- Regenrate Route
+- Genrate Route
 - Exsys Components
 - Antd 3 v ^3.19.3
 
@@ -422,7 +422,7 @@ const CLIENTS_NAMES = {
   SAGAF: "sagaf",
   SAGAF_TEST: "sagaftest",
   TADAWY: "tadawy",
-  NEWCLIENT:"NEWCLIENT" 
+  NEWCLIENT:"NEWCLIENT"  //newly added client
 };
 
 const DEFAULT_VARS_WITH_VALUES = {
@@ -439,7 +439,7 @@ const CLIENTS_URLS = {
   [CLIENTS_NAMES.CLOUD]: "http://161.97.142.25",
   [CLIENTS_NAMES.SAGAF_TEST]: "http://TEST-WEBDB",
   [CLIENTS_NAMES.TADAWY]: "http://192.168.1.100"
-  [CLIENTS_NAMES.NEWCLIENT]: "http://192.168.1.985"
+  [CLIENTS_NAMES.NEWCLIENT]: "http://192.168.1.985" // NEW client URL
 };
 module.exports = {
   DEFAULT_VARS_WITH_VALUES,
@@ -453,11 +453,15 @@ module.exports = {
 
 ```
 
-#### Regenrate Route
+#### Genrate Route
 >lets assuem ur page route will be changed, or your page will accept param(s)
+>
 >all you need to update ur package.json like below
+>
 >then run``` yarn generate-routes```
+>
 >this command will update routes file in  ```app->routes->pagesRoutesData.ts```
+>
 >this command can be found ***in root package.json in scripts section***
 
 ```Javascript
