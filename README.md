@@ -327,13 +327,21 @@ For production environments...
 ```
 ## How to: Create Page Labels
 >exsys is 2 lanague based system (arabic & english)
+>
 >to add your labels 
+>
 >1- run the app ```yarn start``` then login using exysdba/123456
+>
 >2- navigate to **/labels**
+>
 >3- in ***table section*** search for your label if its common like ***(date from or date to)*** and select it
+>
 >4- in ***poge search section*** search for your screen name like ***(rcmDhs)*** and click save
+>
 >***from table section there're 2 columns, one for labelId and one for label description*** 
+>
 >5- copy labelId and add it your **labelIds.json** then use it in your page
+>
 >example below 
 
 ```JSX
