@@ -1,4 +1,7 @@
 # Exsys's CurePlus
+
+![cureplus logo](https://user-images.githubusercontent.com/12882714/108598469-7929c000-7396-11eb-94a3-5fd9911774b8.png)
+
 ## Documentation
 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://bitbucket.org/anspire/ex-webapp/src/master/)
