@@ -434,10 +434,11 @@ const Modal = createLazyComponent(() =>
 
 ## Antd 3
 <div class="pic-plus">
-	<img width="150" src="https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg">
+	<img width="150" src="https://user-images.githubusercontent.com/12882714/108598637-65cb2480-7397-11eb-9cb2-70268dc3d71a.png">
 	<span>+</span>
-	<img width="160" src="https://gw.alipayobjects.com/zos/rmsportal/tXlLQhLvkEelMstLyHiN.svg">
-</div>
+	<img width="160" src="https://user-images.githubusercontent.com/12882714/108598676-a5920c00-7397-11eb-9b7f-ca0ae0caff48.png">
+ 
+ </div>
 
 ##[please check ant design 3 components ](https://3x.ant.design/docs/react/introduce)
  
