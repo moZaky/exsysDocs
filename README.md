@@ -1,6 +1,7 @@
 # Exsys's CurePlus
 
 ![cureplus logo](https://user-images.githubusercontent.com/12882714/108598469-7929c000-7396-11eb-94a3-5fd9911774b8.png)
+<img src="https://user-images.githubusercontent.com/12882714/108598676-a5920c00-7397-11eb-9b7f-ca0ae0caff48.png" width="250" height="250" />  
 
 ## Documentation
 
@@ -433,8 +434,8 @@ const Modal = createLazyComponent(() =>
 ```
 
 ## Antd 3
+<img src="https://user-images.githubusercontent.com/12882714/108598637-65cb2480-7397-11eb-9cb2-70268dc3d71a.png" width="200" height="200" /> +
 
-<img src="https://user-images.githubusercontent.com/12882714/108598676-a5920c00-7397-11eb-9b7f-ca0ae0caff48.png" width="200" height="200" /> +
-<img src="https://user-images.githubusercontent.com/12882714/108598637-65cb2480-7397-11eb-9cb2-70268dc3d71a.png" width="200" height="200" />
-[please check ant design 3 components ](https://3x.ant.design/docs/react/introduce)
+<img src="https://user-images.githubusercontent.com/12882714/108598676-a5920c00-7397-11eb-9b7f-ca0ae0caff48.png" width="250" height="250" />  
+##[please check ant design 3 components ](https://3x.ant.design/docs/react/introduce)
  
