@@ -433,7 +433,8 @@ const Modal = createLazyComponent(() =>
 ```
 
 ## Antd 3
-[please check ant design 3 components ](https://3x.ant.design/docs/react/introduce)
-![antd](https://user-images.githubusercontent.com/12882714/108598637-65cb2480-7397-11eb-9cb2-70268dc3d71a.png){:height="36px" width="36px"} +
-![React-icon](https://user-images.githubusercontent.com/12882714/108598676-a5920c00-7397-11eb-9b7f-ca0ae0caff48.png){:height="36px" width="36px"}
 
+<img src="https://user-images.githubusercontent.com/12882714/108598676-a5920c00-7397-11eb-9b7f-ca0ae0caff48.png" width="200" height="200" /> +
+<img src="https://user-images.githubusercontent.com/12882714/108598637-65cb2480-7397-11eb-9cb2-70268dc3d71a.png" width="200" height="200" />
+[please check ant design 3 components ](https://3x.ant.design/docs/react/introduce)
+ 
