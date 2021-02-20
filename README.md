@@ -380,7 +380,7 @@ then run``` yarn generate-routes```
 this command will update routes file in  ```app->routes->pagesRoutesData.ts```
 this command can be found ***in root package.json in scripts section***
 
-```sh
+```Javascript
 {
   "name": "@app-structure/demo-page",
   "version": "1.0.0",
@@ -419,7 +419,7 @@ this command can be found ***in root package.json in scripts section***
 
 ### createLazyComponent
 - for lazy loading components, common usage for modal
-```
+```JSX
 import createLazyComponent from "@app-structure/react-lazy";
 
 const Modal = createLazyComponent(() =>
