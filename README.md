@@ -32,9 +32,10 @@ in this file you will find the following.
 ```
 - After clone is done installing all packages and deps required for running the app
 - please run the following command  at the very root of the project.
--- please make sure u have lern installed globally before running the following command
+-- please make sure u have lerna and typescript installed globally before running the following command
 ```sh 
-yarn global  add lerna
+yarn add global lerna
+yarn add global typescript
 ```
 - see the lerna-add repo docs https://github.com/lerna/lerna/tree/master/commands/add
 ```sh 
