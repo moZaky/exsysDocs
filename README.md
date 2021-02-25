@@ -19,8 +19,8 @@ in this file you will find the following.
 - Genrate Route
 - Exsys Components
 - Antd 3 v ^3.19.3
-
-
+- adding third party packages
+- more on MONO REPO
 ## Clone Repo
 
 - visit (https://bitbucket.org/anspire/ex-webapp/src/master/)
@@ -526,3 +526,17 @@ const Modal = createLazyComponent(() =>
 
 ## [please check ant design 3 components ](https://3x.ant.design/docs/react/introduce)
  
+# adding third party packges
+>to add dev depdencay 
+```
+lerna add --dev @types/crypto-js  --scope @app-structure/aws-uploader (dev dep
+lerna add -dev some package --scope @app-structure/aws-uploader (dep)
+```
+> to add package shared in all app
+
+```
+yarn add classnames --ignore-workspace-root-check
+
+```
+## MONOREPO
+https://www.toptal.com/front-end/guide-to-monorepos
