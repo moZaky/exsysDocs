@@ -540,3 +540,8 @@ yarn add classnames --ignore-workspace-root-check
 ```
 ## MONOREPO
 https://www.toptal.com/front-end/guide-to-monorepos
+
+
+# videos
+https://1drv.ms/u/s!Ag2_hB68G5w9wVhyb7upsEw_O1qh?e=TbsDzm
+https://1drv.ms/u/s!Ag2_hB68G5w9wVJBiZUQNhSWmZXT?e=aBZINk
