@@ -8,7 +8,7 @@
 
 in this file you will find the following.
 
-- Clone Repo
+- Clone Repo and install typescript
 - App Structure
 - How we use Git
 - Create new package
