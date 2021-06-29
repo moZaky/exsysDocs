@@ -325,7 +325,7 @@ example param1,param2
  
 ```JSX
 import React, { useCallback, useEffect } from "react";
-import { useBasicQuery, useCodeQuery } from "@app-structure/network-hooks/";
+import { useBasicQuery } from "@app-structure/network-hooks/";
 import { PolicyData } from "../index.interface";
 
 const View: React.FC = () => {
@@ -350,6 +350,161 @@ const View: React.FC = () => {
 };
 export default React.memo(View);
 ```
+ >useBasicQuery is used for fetching data from API example 2
+ 
+```JSX
+import React, { useCallback, useEffect } from "react";
+import { useBasicQuery } from "@app-structure/network-hooks/";
+import { PatientResult } from "../index.interface";
+
+const View: React.FC = () => {
+  const [patientData, setPatientData] = React.useState<PatientResult>();
+
+   const onPatientResponse = React.useCallback(data => {
+    if (data?.data) {
+      const patientInfo = data.data[0] as PatientResult;
+
+      patientInfo && setPatientData(patientInfo);
+     
+    }
+  }, []);
+  const { runQuery: patientSearch } = useBasicQuery({
+    apiId: "PATIENT_DATA",
+    // params:,
+    callOnFirstRender: false,
+    onResponse: onPatientResponse
+  });
+  const handleSearchInput = React.useCallback(
+    (value: string) => {
+      patientSearch({
+        request_date: moment().format(DATE_FORMAT),
+        search_type: "C",
+        search_value: value,
+        language_id: planguageid
+      });
+    },
+    [patientSearch, planguageid]
+  );
+  return (<>
+                  {JSON.stringify(patientInfo)}
+   <LabelledInput label="Patient Card No" labelFlex={1.32} width="450px">
+            <SearchInput
+              placeholder="search for patient card no"
+              onSearch={handleSearchInput}
+              enterButton
+            />
+  </LabelledInput>
+
+        </>)
+};
+export default React.memo(View);
+```
+
+
+## How to: useCodeQuery
+  >useCodeQuery is used for fetching data from API WITH type code or u_code
+ 
+```JSX
+import React, { useCallback, useEffect } from "react";
+import { useCodeQuery } from "@app-structure/network-hooks/";
+import { SelectListProps } from "@app-structure/types";
+
+
+const View: React.FC = () => {
+  const [medicationTypeList, setMedicationTypeList] = React.useState<SelectListProps[]>([]);
+  useCodeQuery({
+    type: "u_code",
+    codeId: "MEDICATION",
+    onResponse: setMedicationTypeList,
+    callOnFirstRender: true
+  });
+  return (<>
+                  <Select
+                  name="medication_type"
+                  value={values.medication_type}
+                  onChange={handleChange}
+                  options={medicationTypeList}
+                  width="100%"
+                  size="default"
+                />
+
+        </>)
+};
+export default React.memo(View);
+```
+  
+## How to: useBasicMutation
+  >useBasicMutation is used for POST data from API 
+ 
+```JSX
+import React, { useCallback, useEffect } from "react";
+import { useBasicMutation ,useBasicQuery} from "@app-structure/network-hooks/";
+
+
+const View: React.FC = () => {
+
+ const { runQuery } = useBasicQuery({
+    apiId: "EXCEL_FILE",
+    callOnFirstRender: false,
+    onResponse: onResponseClaimStatistics,
+    params: {
+      claim_month: formValues.month
+        ? moment(formValues.month).format("MM")
+        : "",
+      claim_year: formValues.year ? moment(formValues.year).format("YYYY") : "",
+      client_id: formValues.clientId,
+      medical_insurance_id: formValues.insurance_no,
+   
+    }
+  });
+  const { mutate } = useBasicMutation({
+    apiId: "UPLOAD_EXCEL_FILE",
+    method: "post"
+  });
+ 
+ 
+ const saveData = useCallback( () => {
+       mutate({
+          body: {
+            ...yourObj
+            
+          },
+          //@ts-ignore
+          cb: (res: RecordType, err?: string | boolean) => {
+            if (!err) {
+             
+              runQuery();//to rerender API
+              notification.success({
+                message: "file added successfully "
+              });
+            } else {
+              console.error({ err });
+              notification.error({
+                message: "Something went wrong"
+              });
+            }
+            
+          }
+
+          
+        });
+  }, [  mutate, runQuery]);
+
+ 
+  return (<>
+                  <Button
+                  name="save"
+               
+                  onClick={saveData}  
+                  width="100%"
+                  
+                />
+
+        </>)
+};
+export default React.memo(View);
+```
+
 
 ## How to: Create Page Labels
 >exsys is 2 lanague based system (arabic & english)
