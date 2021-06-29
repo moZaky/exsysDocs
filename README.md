@@ -1,12 +1,9 @@
-# Exsys's CurePlus
+# Exsys's CurePlus Docs
 
 ![cureplus logo](https://user-images.githubusercontent.com/12882714/108598469-7929c000-7396-11eb-94a3-5fd9911774b8.png)
  
-## Documentation
-
-[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://bitbucket.org/anspire/ex-webapp/src/master/)
-
-in this file you will find the following.
+ 
+ ### in this file you will find the following.
 
 - Clone Repo and install typescript
 - App Structure
@@ -14,13 +11,15 @@ in this file you will find the following.
 - Create new package
 - How to: Package Structure (screen)
 - How to: Create Page Labels
-- Build (cLoud)
+- How to: Hooks (useBasicQuery, useBasicMutation,useCodeQuery)
+- Build (cloud)
 - Build (update env )
 - Genrate Route
 - Exsys Components
 - Antd 3 v ^3.19.3
 - adding third party packages
 - more on MONO REPO
+
 ## Clone Repo
 
 - visit (https://bitbucket.org/anspire/ex-webapp/src/master/)
@@ -287,9 +286,7 @@ by default it will be the package name
 > if your package do not have any param(s) press enter
 if your package have param(s) enter them seperated by comma
 example param1,param2
-For production environments...
- ## you will be asked to wrap your component using **labels  provider**
- > press Y
+
 ## you will be asked to wrap your component using **styled component**
  > depending if you need to create your own styled component  
  press Y/n  to create/decline
@@ -300,9 +297,8 @@ For production environments...
 ```
 |-- src
         |-- component.tsx **wrapping views from partials with labels provider*
-        |-- index.interface.ts
+        |-- index.interface.ts # for types and interfaces
         |-- index.ts #wrapping lazy  **component**
-        |-- labelIds.json # for labels 
         |-- styled.ts
 |-- package.json # will discuss next
 |-- README.md  #package description
@@ -313,18 +309,12 @@ For production environments...
 ```
 |-- page-name
     |-- src
-        |-- api # not necessary  to have
-            |-- api1.ts
-            |-- api2.ts  
-        |-- helpers  
-            |-- createColumn.ts  #if your package contains table
-            |-- transform.ts    #to transform object into custom model
-        |-- hooks # not necessary  to have
-            |-- usePopulateData.tsx
+        |-- helpers // each file has only 1 function 
+            |-- transformData.ts //depends on if you need to transform object into custom model
         |-- partials  # lets assuem we have form and table section
             |-- FormView.ts  
             |-- TableView.ts    
-  |-- type.ts  #types
+   
 ```
 ## How to: Create Page Labels
 >exsys is 2 lanague based system (arabic & english)
@@ -341,24 +331,24 @@ For production environments...
 >
 >***from table section there're 2 columns, one for labelId and one for label description*** 
 >
->5- copy labelId and add it your **labelIds.json** then use it in your page
+>5- most of components are wrapped in BaseText after all (labled inputs, date)
 >
 >example below 
 
 ```JSX
 import React, { useCallback, useEffect } from "react";
-import { usePageLabelsContext } from "@app-structure/labels-provider/src";
+ 
 import { PageTitle } from "@app-structure/commons/src";
 const View: React.FC<TableActionViewProps> = ({
   Id,
   showModal,
   toggleModal
 }) => {
-   const labels = usePageLabelsContext(); //calling label provider
+   
   return (<>
              <PageTitle
               fontsize="17px"
-              children={labels.revisionandupload}
+              children={"revisionandupload"} # just add ur tite in ""
               margin="0"
             />
         </>)
