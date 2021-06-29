@@ -316,6 +316,41 @@ example param1,param2
             |-- TableView.ts    
    
 ```
+
+
+
+
+## How to: useBasicQuery
+  >useBasicQuery is used for fetching data from API example 1
+ 
+```JSX
+import React, { useCallback, useEffect } from "react";
+import { useBasicQuery, useCodeQuery } from "@app-structure/network-hooks/";
+import { PolicyData } from "../index.interface";
+
+const View: React.FC = () => {
+  const [policyData, setPolicyData] = useState<PolicyData>();
+
+// u can add alias
+   const { runQuery: policyQuery, loading } = useBasicQuery({
+    apiId: "POP_POLICY_INFO",
+    callOnFirstRender: false, // set to true if you want to be called at first
+    onResponse: setPolicyData,
+    withLanguageParam: true,//lang params
+    params: {
+      policy_no: values.policy_no //addtional params
+    },
+    //@ts-ignore
+    transformApiDataFn: (data: { data: PolicyData }) => data?.data[0] // to transform data
+  });
+  return (<>
+                  {JSON.stringify(policyData)}
+
+        </>)
+};
+export default React.memo(View);
+```
+
 ## How to: Create Page Labels
 >exsys is 2 lanague based system (arabic & english)
 >
